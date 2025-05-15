@@ -33,6 +33,13 @@ const TestView = () => {
   const [fetchError, setFetchError] = useState(null);
 
   useEffect(() => {
+    // Apply fixed background to document body so the gradient stays stationary
+    const prevBodyBackground = document.body.style.background || '';
+    const prevBodyBackgroundAttachment = document.body.style.backgroundAttachment || '';
+    const prevBodyMargin = document.body.style.margin || '';
+    document.body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+    document.body.style.backgroundAttachment = 'fixed';
+    document.body.style.margin = '0';
     const urlParams = new URLSearchParams(window.location.search);
     const dataParam = urlParams.get('data');
     const idParam = urlParams.get('id');
@@ -85,6 +92,13 @@ const TestView = () => {
       setTestData({ __noData: true });
       setLoading(false);
     })();
+
+    return () => {
+      // restore body styles
+      document.body.style.background = prevBodyBackground;
+      document.body.style.backgroundAttachment = prevBodyBackgroundAttachment;
+      document.body.style.margin = prevBodyMargin;
+    };
   }, []);
 
   if (loading) {
@@ -94,7 +108,6 @@ const TestView = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         color: 'white',
         fontFamily: 'system-ui, -apple-system, sans-serif'
       }}>
@@ -108,7 +121,7 @@ const TestView = () => {
 
   if (fetchError) {
     return (
-      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white' }}>
+      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
         <div style={{ maxWidth: 760, padding: 24, background: 'rgba(255,255,255,0.04)', borderRadius: 12 }}>
           <h2 style={{ marginTop: 0 }}>Unable to fetch test data</h2>
           <p style={{ color: '#e2e8f0' }}>{fetchError}</p>
@@ -122,7 +135,7 @@ const TestView = () => {
 
   if (testData && (testData.__parseError || testData.__noData)) {
     return (
-      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white' }}>
+      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
         <div style={{ maxWidth: 760, padding: 24, background: 'rgba(255,255,255,0.04)', borderRadius: 12 }}>
           <h2 style={{ marginTop: 0 }}>Unable to load test data</h2>
           <p style={{ color: '#e2e8f0' }}>The test data provided in the URL could not be parsed or no id was provided.</p>
@@ -142,7 +155,7 @@ const TestView = () => {
 
   if (!testData || !testData.questions || !Array.isArray(testData.questions) || testData.questions.length === 0) {
     return (
-      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white' }}>
+      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
         <div style={{ maxWidth: 760, padding: 24, background: 'rgba(255,255,255,0.04)', borderRadius: 12, textAlign: 'center' }}>
           <h2 style={{ marginTop: 0 }}>No Questions Found</h2>
           <p style={{ color: '#e2e8f0' }}>The test data does not contain any questions.</p>
@@ -155,40 +168,23 @@ const TestView = () => {
   }
 
   return (
+    // Background fills viewport (stationary); the white card is a normal block so the whole page scrolls
     <div style={{
       minHeight: '100vh',
+      padding: '40px 20px',
+      boxSizing: 'border-box',
       background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      padding: '20px',
+      backgroundAttachment: 'fixed',
       fontFamily: 'system-ui, -apple-system, sans-serif'
     }}>
       <style>{`
-        .test-content img {
-          max-width: 100%;
-          height: auto !important;
-          display: block;
-          margin: 8px 0;
-          border-radius: 4px;
-        }
-        .test-content p {
-          margin: 0;
-          line-height: 1.5;
-        }
-        .test-content span {
-          display: inline;
-        }
+        .test-content img { max-width: 100%; height: auto !important; display: block; margin: 8px 0; border-radius: 4px; }
+        .test-content p { margin: 0; line-height: 1.5; }
+        .test-content span { display: inline; }
+
+        .tv-card { max-width: 900px; margin: 24px auto; background: white; border-radius: 12px; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
       `}</style>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        style={{
-          maxWidth: '800px',
-          margin: '0 auto',
-          background: 'white',
-          borderRadius: '16px',
-          padding: '32px',
-          boxShadow: '0 20px 40px rgba(0, 0, 0, 0.2)'
-        }}
-      >
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="tv-card">
         <div style={{
           textAlign: 'center',
           marginBottom: '32px',
@@ -201,7 +197,7 @@ const TestView = () => {
             color: '#1e293b',
             marginBottom: '8px'
           }}>
-            {(testData.subject && testData.subject) || testData.subjectId || 'Test'} Test Questions
+        Test Questions
           </h1>
           <p style={{ color: '#64748b', fontSize: '16px' }}>
             {testData.questions.length} questions with answers
