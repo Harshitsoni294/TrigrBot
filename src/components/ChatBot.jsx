@@ -201,7 +201,7 @@ const ChatBot = ({ isOpen, onClose }) => {
             onClick={onClose}
           />
 
-          {/* Premium Chatbot Container */}
+          {/* Premium Chatbot Container - Responsive */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -217,7 +217,8 @@ const ChatBot = ({ isOpen, onClose }) => {
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              width: '50vw', 
+              width: 'min(95vw, 50vw)', 
+              maxWidth: '900px',
               height: '95vh',
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
               borderRadius: '24px',
@@ -236,10 +237,10 @@ const ChatBot = ({ isOpen, onClose }) => {
               flexDirection: 'column',
               overflow: 'hidden'
             }}>
-              {/* Premium Header with Gradient */}
+              {/* Premium Header with Gradient - Responsive padding */}
               <div style={{
                 background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                padding: '24px 24px 20px',
+                padding: 'clamp(16px, 4vw, 24px) clamp(16px, 4vw, 24px) clamp(14px, 3vw, 20px)',
                 borderRadius: '22px 22px 0 0',
                 position: 'relative',
                 overflow: 'hidden'
@@ -259,7 +260,7 @@ const ChatBot = ({ isOpen, onClose }) => {
                 <div className="flex items-center justify-between relative z-10">
                   <div className="flex items-center gap-3">                
                     <div>
-                      <h2 style={{ color: 'white', fontSize: '18px', fontWeight: '700', marginBottom: '2px' }}>
+                      <h2 style={{ color: 'white', fontSize: 'clamp(16px, 4vw, 18px)', fontWeight: '700', marginBottom: '2px' }}>
                         AI Test Assistant
                       </h2>
                       
@@ -290,11 +291,11 @@ const ChatBot = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              {/* Chat Messages Area with Premium Styling */}
+              {/* Chat Messages Area with Premium Styling - Responsive padding */}
               <div style={{ 
                 flex: 1, 
                 overflowY: 'auto', 
-                padding: '24px',
+                padding: 'clamp(12px, 3vw, 24px)',
                 background: 'linear-gradient(to bottom, #fafafa 0%, #ffffff 100%)'
               }}>
                 <div className="space-y-4">
@@ -310,12 +311,12 @@ const ChatBot = ({ isOpen, onClose }) => {
                         flexDirection: message.sender === 'user' ? 'row-reverse' : 'row'
                       }}
                     >
-                      {/* Avatar */}
-                      <div style={{ flexShrink: 0, width: '36px', height: '36px' }}>
+                      {/* Avatar - Responsive size */}
+                      <div style={{ flexShrink: 0, width: 'clamp(28px, 6vw, 36px)', height: 'clamp(28px, 6vw, 36px)' }}>
                         {message.sender === 'bot' ? (
                           <div style={{
-                            width: '36px',
-                            height: '36px',
+                            width: '100%',
+                            height: '100%',
                             borderRadius: '50%',
                             background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                             display: 'flex',
@@ -323,19 +324,19 @@ const ChatBot = ({ isOpen, onClose }) => {
                             justifyContent: 'center',
                             boxShadow: '0 4px 12px rgba(102, 126, 234, 0.3)'
                           }}>
-                            <p>🤖</p>
+                            <p style={{ fontSize: 'clamp(14px, 3vw, 16px)', margin: 0 }}>🤖</p>
                           </div>
                         ) : (
                           <div style={{
-                            width: '36px',
-                            height: '36px',
+                            width: '100%',
+                            height: '100%',
                             borderRadius: '50%',
                             background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             boxShadow: '0 4px 12px rgba(245, 87, 108, 0.3)',
-                            fontSize: '16px',
+                            fontSize: 'clamp(14px, 3vw, 16px)',
                             fontWeight: '600',
                             color: 'white'
                           }}>
@@ -344,18 +345,18 @@ const ChatBot = ({ isOpen, onClose }) => {
                         )}
                       </div>
 
-                      {/* Premium Message Bubble */}
+                      {/* Premium Message Bubble - Responsive */}
                       <div style={{
                         display: 'flex',
                         flexDirection: 'column',
-                        maxWidth: '75%',
+                        maxWidth: 'min(85%, 75%)',
                         alignItems: message.sender === 'user' ? 'flex-end' : 'flex-start'
                       }}>
                         <motion.div
                           whileHover={{ scale: 1.02 }}
                           style={{
                             borderRadius: message.sender === 'user' ? '20px 20px 4px 20px' : '20px 20px 20px 4px',
-                            padding: '14px 18px',
+                            padding: 'clamp(10px, 2.5vw, 14px) clamp(12px, 3vw, 18px)',
                             background: message.sender === 'user' 
                               ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
                               : '#ffffff',
@@ -368,17 +369,18 @@ const ChatBot = ({ isOpen, onClose }) => {
                           }}
                         >
                           <p style={{ 
-                            fontSize: '14px', 
+                            fontSize: 'clamp(13px, 3vw, 14px)', 
                             lineHeight: '1.6',
                             margin: 0,
-                            fontWeight: message.sender === 'user' ? '500' : '400'
+                            fontWeight: message.sender === 'user' ? '500' : '400',
+                            wordBreak: 'break-word'
                           }}>
                             {message.text}
                           </p>
                           
-                          {/* View Test Button */}
+                          {/* View Test Button - Responsive */}
                           {message.hasTestData && (
-                            <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
+                            <div style={{ display: 'flex', gap: 'clamp(6px, 2vw, 8px)', marginTop: 'clamp(8px, 2vw, 12px)', flexWrap: 'wrap' }}>
                               <motion.button
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.9 }}
@@ -434,22 +436,22 @@ const ChatBot = ({ isOpen, onClose }) => {
                                 }
                               }}
                               style={{
-                                marginTop: '12px',
                                 display: 'flex',
                                 alignItems: 'center',
-                                gap: '8px',
-                                padding: '8px 16px',
+                                gap: 'clamp(4px, 2vw, 8px)',
+                                padding: 'clamp(6px, 2vw, 8px) clamp(10px, 3vw, 16px)',
                                 background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                                 color: 'white',
                                 border: 'none',
                                 borderRadius: '12px',
-                                fontSize: '13px',
+                                fontSize: 'clamp(12px, 3vw, 13px)',
                                 fontWeight: '500',
                                 cursor: 'pointer',
-                                boxShadow: '0 4px 12px rgba(102, 126, 234, 0.3)'
+                                boxShadow: '0 4px 12px rgba(102, 126, 234, 0.3)',
+                                whiteSpace: 'nowrap'
                               }}
                             >
-                              <Eye className="w-4 h-4" />
+                              <Eye style={{ width: 'clamp(14px, 3vw, 16px)', height: 'clamp(14px, 3vw, 16px)' }} />
                               View Test
                               </motion.button>
 
@@ -493,18 +495,18 @@ const ChatBot = ({ isOpen, onClose }) => {
                                   }
                                 }}
                                 style={{
-                                  marginTop: '12px',
                                   display: 'flex',
                                   alignItems: 'center',
-                                  gap: '8px',
-                                  padding: '8px 12px',
+                                  gap: 'clamp(4px, 2vw, 8px)',
+                                  padding: 'clamp(6px, 2vw, 8px) clamp(10px, 3vw, 12px)',
                                   background: '#ffffff',
                                   color: '#1e293b',
                                   border: '1px solid #e2e8f0',
                                   borderRadius: '12px',
-                                  fontSize: '13px',
+                                  fontSize: 'clamp(12px, 3vw, 13px)',
                                   fontWeight: '500',
-                                  cursor: 'pointer'
+                                  cursor: 'pointer',
+                                  whiteSpace: 'nowrap'
                                 }}
                               >
                                 Copy
@@ -580,9 +582,9 @@ const ChatBot = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              {/* Premium Input Area */}
+              {/* Premium Input Area - Responsive padding */}
               <div style={{
-                padding: '20px 24px',
+                padding: 'clamp(14px, 3vw, 20px) clamp(16px, 4vw, 24px)',
                 background: 'linear-gradient(to top, #fafafa 0%, #ffffff 100%)',
                 borderTop: '1px solid #f1f5f9'
               }}>
@@ -605,11 +607,11 @@ const ChatBot = ({ isOpen, onClose }) => {
                     placeholder="Type your message..."
                     style={{
                       flex: 1,
-                      padding: '12px 16px',
+                      padding: 'clamp(10px, 2.5vw, 12px) clamp(12px, 3vw, 16px)',
                       background: 'transparent',
                       border: 'none',
                       outline: 'none',
-                      fontSize: '14px',
+                      fontSize: 'clamp(13px, 3vw, 14px)',
                       color: '#1e293b',
                       fontWeight: '400'
                     }}
@@ -621,9 +623,9 @@ const ChatBot = ({ isOpen, onClose }) => {
                     onClick={handleSendMessage}
                     disabled={!inputValue.trim()}
                     style={{
-                      width: '44px',
-                      height: '44px',
-                      borderRadius: '12px',
+                      width: 'clamp(40px, 9vw, 44px)',
+                      height: 'clamp(40px, 9vw, 44px)',
+                      borderRadius: 'clamp(10px, 2.5vw, 12px)',
                       background: inputValue.trim() 
                         ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
                         : '#e2e8f0',
@@ -638,8 +640,11 @@ const ChatBot = ({ isOpen, onClose }) => {
                     aria-label="Send message"
                   >
                     <Send 
-                      className="w-5 h-5" 
-                      style={{ color: inputValue.trim() ? 'white' : '#94a3b8' }} 
+                      style={{ 
+                        color: inputValue.trim() ? 'white' : '#94a3b8',
+                        width: 'clamp(18px, 4vw, 20px)',
+                        height: 'clamp(18px, 4vw, 20px)'
+                      }} 
                     />
                   </motion.button>
                 </div>
