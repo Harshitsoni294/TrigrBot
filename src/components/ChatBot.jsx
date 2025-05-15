@@ -570,7 +570,7 @@ const ChatBot = ({ isOpen, onClose }) => {
                                           'text/plain': blobText
                                         });
                                         await navigator.clipboard.write([clipboardItem]);
-                                        alert('Questions (with formatting) copied to clipboard — paste into Google Docs or Word.');
+                                        alert('Copy this test.');
                                         return;
                                       } catch (apiErr) {
                                         console.warn('clipboard.write with HTML failed, falling back', apiErr);
