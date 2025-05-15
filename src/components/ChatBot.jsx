@@ -395,17 +395,20 @@ const ChatBot = ({ isOpen, onClose }) => {
                                   };
 
                                   const td = message.testData || {};
+                                  // For shareable link we need to preserve original HTML (images, formatting).
+                                  // Store the HTML fields (question, opt1..opt4) so TestView can render them later.
                                   const compact = {
                                     testPlan: td.testPlan || null,
                                     questionCount: td.questionCount || (Array.isArray(td.questions) ? td.questions.length : 0),
                                     createdAt: td.createdAt || Date.now(),
                                     questions: Array.isArray(td.questions) ? td.questions.map(q => ({
                                       _id: q._id || q.id || null,
-                                      question: stripHtml(q.question || q.questionText || q.question_html || ''),
-                                      opt1: stripHtml(q.opt1 || q.option1 || ''),
-                                      opt2: stripHtml(q.opt2 || q.option2 || ''),
-                                      opt3: stripHtml(q.opt3 || q.option3 || ''),
-                                      opt4: stripHtml(q.opt4 || q.option4 || ''),
+                                      // Preserve HTML so TestView can render images and formatting
+                                      question: q.question || q.questionText || q.question_html || '',
+                                      opt1: q.opt1 || q.option1 || '',
+                                      opt2: q.opt2 || q.option2 || '',
+                                      opt3: q.opt3 || q.option3 || '',
+                                      opt4: q.opt4 || q.option4 || '',
                                       ans: q.ans || q.answer || '',
                                       correct: q.correct || ''
                                     })) : []
