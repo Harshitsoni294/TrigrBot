@@ -77,7 +77,7 @@ const ChatBot = ({ isOpen, onClose }) => {
         const err = await resp.json().catch(() => ({}));
         const botResponse = {
           id: Date.now() + 1,
-          text: `Sorry, I couldn't generate the test: ${err.error || resp.statusText}`,
+          text: err.chatbotReply || `Sorry, I couldn't process your request: ${err.error || resp.statusText}`,
           sender: 'bot',
           timestamp: new Date(),
         };
@@ -88,29 +88,26 @@ const ChatBot = ({ isOpen, onClose }) => {
 
       const body = await resp.json();
 
-      // Prefer server-provided normalized testData when available
-      let questions = [];
-      let testDataFromServer = null;
-      if (body && body.testData && Array.isArray(body.testData.questions)) {
-        testDataFromServer = body.testData;
-        questions = body.testData.questions;
-      } else if (Array.isArray(body.questions) && body.questions.length) {
-        questions = body.questions;
-      } else if (Array.isArray(body.questionsByPlan) && body.questionsByPlan.length) {
-        questions = body.questionsByPlan.flatMap(p => Array.isArray(p.questions) ? p.questions : []);
-      }
+      // Check if this is a conversational response (no test data)
+      const questions = body.testData?.questions || body.questions || [];
+      const hasValidTest = Array.isArray(questions) && questions.length > 0;
 
-      if (!questions || questions.length === 0) {
+      // If no valid test was generated, just show the chatbot reply
+      if (!hasValidTest) {
         const botResponse = {
           id: Date.now() + 1,
-          text: `I couldn't find questions for the requested subject. Please try another topic or be more specific.`,
+          text: body.chatbotReply || "I'm here to help you create tests. Please tell me what subject and how many questions you'd like.",
           sender: 'bot',
           timestamp: new Date(),
+          // No test data, so no View Test / Copy buttons
         };
         setMessages(prev => [...prev, botResponse]);
         setIsTyping(false);
         return;
       }
+
+      // Valid test generated - prepare test data
+      let testDataFromServer = body.testData;
 
   // Compose testData object
   const totalCount = questions.length;

@@ -302,22 +302,36 @@ app.post('/generate-test', async (req, res) => {
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
         const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
 
-  const prompt = `You are an advanced Test Request Parsing AI. You will be given two inputs:
+  const prompt = `You are an advanced AI Test Assistant. You will be given two inputs:
 1) USER_MESSAGE
 2) AVAILABLE_CONTENT (subjects with id,name and topics with id,name only).
 
-Your job: RETURN ONLY A SINGLE JSON OBJECT (no surrounding text) that contains two keys: testPlan (array) and chatbotReply (string).
+Your job: Analyze the user's message and RETURN ONLY A SINGLE JSON OBJECT (no surrounding text).
 
-CRITICAL RULES - YOU MUST NEVER FAIL:
-1) ALWAYS return a valid testPlan, even if the user's request is vague or doesn't specify subjects
-2) If user says "any subjects" or doesn't specify subjects, YOU MUST choose appropriate subjects from AVAILABLE_CONTENT yourself
-3) NEVER leave subjectId or subjectName empty/null/blank - always fill them with valid values from AVAILABLE_CONTENT
-4) Map user mentions to subjects/topics from AVAILABLE_CONTENT (match by name, case-insensitive)
-5) Use topicId:null and topicName:null when user wants any topic from a subject or when subject has no topics
-6) Default to 10 questions per subject/topic when no count specified
-7) If user gives total count and specific topic counts, compute remainder for general questions (topicId:null)
-8) The chatbotReply should be natural, friendly, and describe what test you're creating
-9) Always use valid subjectId and names from AVAILABLE_CONTENT only
+CRITICAL INSTRUCTIONS:
+
+IF the message is a GREETING (hi, hello, hey, etc.):
+- Return: {"testPlan": [], "chatbotReply": "Hello! I'm your AI Test Assistant. I can help you create customized tests. Please tell me what subject you'd like to focus on and how many questions you need."}
+
+IF the message is UNRELATED to test generation (weather, jokes, personal questions, etc.):
+- Return: {"testPlan": [], "chatbotReply": "I'm sorry, but I can only assist with creating educational tests. Please ask me to generate questions on specific subjects or topics."}
+
+IF the message requests a TEST but the SUBJECT IS NOT IN AVAILABLE_CONTENT:
+- Check if there's a similar or related subject available (e.g., "science" → look for "Physics", "Chemistry", "Biology")
+- If a related subject exists, use it and inform the user: {"testPlan": [use the related subject], "chatbotReply": "I don't have questions specifically on [requested subject], but I can create a test on [related subject] which covers similar content. Generating [count] questions now."}
+- If NO related subject exists: {"testPlan": [], "chatbotReply": "I apologize, but I don't have questions available for [requested subject] at the moment. Could you try another subject?"}
+- NEVER reveal the complete list of available subjects to the user
+
+IF the message is a VALID TEST REQUEST with subjects IN AVAILABLE_CONTENT:
+- Return a JSON with BOTH testPlan array AND chatbotReply
+- testPlan must contain objects with: subjectId, subjectName, topicId, topicName, count
+- CRITICAL: subjectId and subjectName are REQUIRED and must NEVER be null or empty - use actual IDs and names from AVAILABLE_CONTENT
+- Map user mentions to subjects/topics from AVAILABLE_CONTENT (exact or case-insensitive matching)
+- If user says "science", look for Physics, Chemistry, Biology, etc. and pick the most relevant
+- For topicId and topicName: if user wants a specific topic, use the topic ID and name from AVAILABLE_CONTENT; if user wants "all topics" or doesn't specify, set topicId to null and topicName to null
+- Default to 10 questions per subject when no count specified
+- chatbotReply should be friendly, use past tense (e.g., "Created" not "Creating"), and describe what test you created
+- Example response: {"testPlan":[{"subjectId":"67890abc","subjectName":"Physics-123","topicId":null,"topicName":null,"count":10}], "chatbotReply":"Okay! I've created a test with 10 questions on Physics-123 covering all topics."}
 
 AVAILABLE_CONTENT:
 ${JSON.stringify(availableContent)}
@@ -325,7 +339,7 @@ ${JSON.stringify(availableContent)}
 USER_MESSAGE:
 ${message}
 
-Return EXACT JSON now with format: {"testPlan":[{"subjectId":"...","subjectName":"...","topicId":null or "...","topicName":null or "...","count":number}],"chatbotReply":"..."}`;
+Return EXACT JSON now with format: {"testPlan":[{"subjectId":"...","subjectName":"...","topicId":null or "...","topicName":null or "...","count":number}], "chatbotReply":"..."}`;
 
 
         const result = await model.generateContent(prompt);
@@ -472,25 +486,44 @@ Return EXACT JSON now with format: {"testPlan":[{"subjectId":"...","subjectName"
       }
 
     if (!parsedPlan) {
-      return res.status(400).json({ error: 'Could not parse test request. Try a clearer message like "Create 10 math questions"', parser_response: parserText });
+      return res.status(400).json({ 
+        error: 'Could not parse your request.', 
+        chatbotReply: 'I apologize, but I had trouble understanding your request. Could you please try again? For example: "Create 10 math questions" or "Generate 5 questions on English grammar"',
+        parser_response: parserText 
+      });
     }
 
-    // Validate and normalize testPlan entries
-    const testPlan = Array.isArray(parsedPlan.testPlan) ? parsedPlan.testPlan.map((entry) => {
-      const subjId = entry.subjectId || entry.subject || null;
-      const subjName = entry.subjectName || entry.subject || null;
-      const topicId = (typeof entry.topicId === 'undefined') ? (entry.topic || null) : entry.topicId;
-      const topicName = (typeof entry.topicName === 'undefined') ? (entry.topicName || null) : entry.topicName;
-      // Accept multiple possible keys from model: count, questionCount, question_count, c
-      const rawCount = (typeof entry.count !== 'undefined') ? entry.count : ((typeof entry.questionCount !== 'undefined') ? entry.questionCount : ((typeof entry.question_count !== 'undefined') ? entry.question_count : (typeof entry.c !== 'undefined' ? entry.c : 0)));
-      const count = parseInt(rawCount || 0, 10) || 0;
-      return { subjectId: subjId, subjectName: subjName, topicId: topicId, topicName: topicName, count };
-    }) : [];
+    // Check if this is a conversational response (empty testPlan)
+    const testPlan = Array.isArray(parsedPlan.testPlan) ? parsedPlan.testPlan : [];
+    
+    // Normalize and validate testPlan entries
+    const normalizedTestPlan = testPlan
+      .map((entry) => {
+        const subjId = entry.subjectId || entry.subject || null;
+        const subjName = entry.subjectName || entry.subject || null;
+        const topicId = (typeof entry.topicId === 'undefined') ? (entry.topic || null) : entry.topicId;
+        const topicName = (typeof entry.topicName === 'undefined') ? (entry.topicName || null) : entry.topicName;
+        const rawCount = (typeof entry.count !== 'undefined') ? entry.count : ((typeof entry.questionCount !== 'undefined') ? entry.questionCount : ((typeof entry.question_count !== 'undefined') ? entry.question_count : (typeof entry.c !== 'undefined' ? entry.c : 0)));
+        const count = parseInt(rawCount || 0, 10) || 0;
+        return { subjectId: subjId, subjectName: subjName, topicId: topicId, topicName: topicName, count };
+      })
+      .filter(p => p.subjectId && p.subjectId !== 'null' && p.count > 0); // Filter out invalid entries
+    
+    // If no valid test plan entries, return only the chatbot reply (conversational response)
+    if (normalizedTestPlan.length === 0) {
+      const chatbotReply = parsedPlan.chatbotReply || "I'm here to help you create tests. Please tell me what subject and how many questions you'd like.";
+      return res.json({
+        testPlan: [],
+        chatbotReply,
+        testData: null,
+        usedParser
+      });
+    }
 
   // For each plan entry, fetch questions
     const questionsByPlan = [];
-    for (let i = 0; i < testPlan.length; i++) {
-      const p = testPlan[i];
+    for (let i = 0; i < normalizedTestPlan.length; i++) {
+      const p = normalizedTestPlan[i];
       const questions = await fetchQuestionsByPlan(p.subjectId, p.count, p.topicId);
       questionsByPlan.push({ planIndex: i, subjectId: p.subjectId, topicId: p.topicId, questions });
     }
@@ -548,46 +581,49 @@ Return EXACT JSON now with format: {"testPlan":[{"subjectId":"...","subjectName"
     }
   }
 
+  // Check if we actually found any questions
+  if (flattenedQuestions.length === 0) {
+    // No questions found - return conversational response without test data
+    const subjectNames = normalizedTestPlan.map(p => p.subjectName).filter(Boolean).join(', ');
+    const chatbotReply = `I apologize, but I don't have questions available for ${subjectNames} at the moment. Could you try another subject or topic?`;
+    return res.json({
+      testPlan: [],
+      chatbotReply,
+      testData: null,
+      usedParser
+    });
+  }
+
   const testData = {
-    testPlan,
+    testPlan: normalizedTestPlan,
     questionsByPlan,
     questions: flattenedQuestions,
     questionCount: flattenedQuestions.length,
     createdAt: Date.now()
   };
 
-  // Optionally correct grammar/tense of the chatbot reply using Gemini if enabled.
+  // Get chatbot reply and ensure it uses past tense (test is already created)
   let finalChatbotReply = (parsedPlan.chatbotReply || '').trim();
-  // Enable grammar correction by setting CORRECT_REPLY=true in .env. Disabled by default to avoid extra LLM calls.
-  if (process.env.CORRECT_REPLY === 'true' && process.env.GEMINI_API_KEY && GoogleGenerativeAI) {
-    try {
-      const genAI2 = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-      const model2 = genAI2.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
-      const correctionPrompt = `Correct the grammar and tense of the following single sentence to fluent, natural English. Return ONLY the corrected sentence (no explanation):\n\n"${finalChatbotReply.replace(/"/g, '\\"')}"`;
-      const corrRes = await model2.generateContent(correctionPrompt);
-      let corrText = null;
-      try {
-        corrText = await Promise.resolve(typeof corrRes.response.text === 'function' ? corrRes.response.text() : (corrRes.response && corrRes.response.toString ? corrRes.response.toString() : String(corrRes)));
-      } catch (e) {
-        corrText = String(corrRes && corrRes.response ? corrRes.response : corrRes);
-      }
-      if (corrText) {
-        corrText = String(corrText).replace(/```/g, '').trim();
-        if (corrText) finalChatbotReply = corrText;
-      }
-    } catch (e) {
-      console.warn('chatbotReply correction failed:', e && e.message ? e.message : e);
-    }
+  
+  // Replace "Generating" with "Generated" to indicate completion
+  finalChatbotReply = finalChatbotReply.replace(/\bGenerating\b/gi, 'Generated');
+  finalChatbotReply = finalChatbotReply.replace(/\bI'm creating\b/gi, "I've created");
+  finalChatbotReply = finalChatbotReply.replace(/\bcreating\b/gi, 'created');
+  
+  // If no chatbot reply was provided, generate a default one
+  if (!finalChatbotReply) {
+    const totalQuestions = flattenedQuestions.length;
+    finalChatbotReply = `✅ Test created successfully! I've generated ${totalQuestions} question${totalQuestions !== 1 ? 's' : ''} for you.`;
   }
 
-  const responsePayload = { testPlan, questionsByPlan, testData, chatbotReply: finalChatbotReply, parser_response: parserText, usedParser };
-  if (usedParser !== 'gemini') {
-    responsePayload.debug = {
-      cleanedCandidate: (typeof cleanedCandidate !== 'undefined' ? String(cleanedCandidate).slice(0, 2000) : null),
-      parseErrors: (typeof parseErrors !== 'undefined' ? parseErrors : []),
-      allMatchesFound: String(parserText || '').match(/\{[\s\S]*?\}/g) ? String(parserText || '').match(/\{[\s\S]*?\}/g).length : 0
-    };
-  }
+  const responsePayload = { 
+    testPlan: normalizedTestPlan, 
+    questionsByPlan, 
+    testData, 
+    chatbotReply: finalChatbotReply, 
+    usedParser 
+  };
+  
   return res.json(responsePayload);
   } catch (err) {
     console.error(err);
