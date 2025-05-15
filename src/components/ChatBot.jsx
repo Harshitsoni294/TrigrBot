@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Send, X, Zap, Eye } from 'lucide-react';
+import { Send, X, Zap, Eye, Copy, Check } from 'lucide-react';
 
 // Use environment variable for API base URL (for independent backend deployment)
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000';
@@ -39,6 +39,7 @@ const ChatBot = ({ isOpen, onClose }) => {
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [copiedMessageId, setCopiedMessageId] = useState(null);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -570,7 +571,9 @@ const ChatBot = ({ isOpen, onClose }) => {
                                           'text/plain': blobText
                                         });
                                         await navigator.clipboard.write([clipboardItem]);
-                                        alert('Copy this test.');
+                                        // Show copied state for 3 seconds
+                                        setCopiedMessageId(message.id);
+                                        setTimeout(() => setCopiedMessageId(null), 3000);
                                         return;
                                       } catch (apiErr) {
                                         console.warn('clipboard.write with HTML failed, falling back', apiErr);
@@ -594,7 +597,9 @@ const ChatBot = ({ isOpen, onClose }) => {
                                       document.execCommand('copy');
                                       sel.removeAllRanges();
                                       document.body.removeChild(container);
-                                      alert('Questions copied to clipboard (rich HTML).');
+                                      // Show copied state
+                                      setCopiedMessageId(message.id);
+                                      setTimeout(() => setCopiedMessageId(null), 1000);
                                       return;
                                     } catch (execErr) {
                                       console.warn('execCommand copy fallback failed', execErr);
@@ -612,7 +617,9 @@ const ChatBot = ({ isOpen, onClose }) => {
                                         document.execCommand('copy');
                                         document.body.removeChild(ta);
                                       }
-                                      alert('Questions copied as plain text to clipboard.');
+                                      // Show copied state
+                                      setCopiedMessageId(message.id);
+                                      setTimeout(() => setCopiedMessageId(null), 1000);
                                     } catch (finalErr) {
                                       console.error('final copy attempt failed', finalErr);
                                       alert('Unable to copy to clipboard. Your browser may block clipboard access.');
@@ -625,19 +632,32 @@ const ChatBot = ({ isOpen, onClose }) => {
                                 style={{
                                   display: 'flex',
                                   alignItems: 'center',
+                                  justifyContent: 'center',
                                   gap: 'clamp(4px, 2vw, 8px)',
                                   padding: 'clamp(6px, 2vw, 8px) clamp(10px, 3vw, 12px)',
-                                  background: '#ffffff',
-                                  color: '#1e293b',
-                                  border: '1px solid #e2e8f0',
+                                  minWidth: 'clamp(70px, 15vw, 90px)',
+                                  background: copiedMessageId === message.id ? '#f1f5f9' : '#ffffff',
+                                  color: copiedMessageId === message.id ? '#64748b' : '#1e293b',
+                                  border: `1px solid ${copiedMessageId === message.id ? '#cbd5e1' : '#e2e8f0'}`,
                                   borderRadius: '12px',
                                   fontSize: 'clamp(12px, 3vw, 13px)',
                                   fontWeight: '500',
                                   cursor: 'pointer',
-                                  whiteSpace: 'nowrap'
+                                  whiteSpace: 'nowrap',
+                                  transition: 'all 0.2s ease'
                                 }}
                               >
-                                Copy
+                                {copiedMessageId === message.id ? (
+                                  <>
+                                    <Check style={{ width: 'clamp(14px, 3vw, 16px)', height: 'clamp(14px, 3vw, 16px)' }} />
+                                    Copied
+                                  </>
+                                ) : (
+                                  <>
+                                    <Copy style={{ width: 'clamp(14px, 3vw, 16px)', height: 'clamp(14px, 3vw, 16px)' }} />
+                                    Copy
+                                  </>
+                                )}
                               </motion.button>
                             </div>
                           )}
