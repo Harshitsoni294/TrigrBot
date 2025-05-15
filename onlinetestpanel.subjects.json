@@ -1,0 +1,168 @@
+[{
+  "_id": {
+    "$oid": "6081630af7ad8a422b7a2003"
+  },
+  "title": "zoom",
+  "code": "0011",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1619092234,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "621d0c1d5eda2f2e923c573c"
+  },
+  "title": "Math",
+  "code": "math",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1646070813,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "621d0c2a664d2e11b01d5f40"
+  },
+  "title": "English",
+  "code": "English",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1646070826,
+  "status": 0
+},
+{
+  "_id": {
+    "$oid": "621d0c3325fb6f0cda281b27"
+  },
+  "title": "Gk",
+  "code": "gk",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1646070835,
+  "status": 0
+},
+{
+  "_id": {
+    "$oid": "6656efb67ed9933d2d7c1986"
+  },
+  "title": "Organisational Behaviour",
+  "code": "",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1716973494,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6656efc1525d70755b3e4609"
+  },
+  "title": "Marketing Management",
+  "code": "",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1716973505,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6656efcb4d1cee4c41673ab4"
+  },
+  "title": "Project Management",
+  "code": "",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1716973515,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6656efd4221c143d043aa374"
+  },
+  "title": "International Business Management",
+  "code": "",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1716973524,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6656efdea3b0ba0e5f36f609"
+  },
+  "title": "Strategic Management",
+  "code": "",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1716973534,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6656eff17ed9933d2d7c1987"
+  },
+  "title": "Specialization Subject",
+  "code": "",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1716973553,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "668295945d747b39fa415238"
+  },
+  "title": "Gks",
+  "code": "",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1719834004,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6697936c7cd0996485758ec5"
+  },
+  "title": "html",
+  "code": "",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1721209708,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "678f282026a0c404c41b8120"
+  },
+  "title": "Physics-123",
+  "code": "",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1737435168,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "67e7b69702cadd2a3d1a62cf"
+  },
+  "title": "sambhavam ias",
+  "code": "sam",
+  "created_by": {
+    "$oid": "6081603a4fe69c275f3a22d1"
+  },
+  "created": 1743238807,
+  "status": 1
+}]
