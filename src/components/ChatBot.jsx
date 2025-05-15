@@ -491,23 +491,30 @@ const ChatBot = ({ isOpen, onClose }) => {
                                       return;
                                     }
 
+                                    // Helper: strip HTML tags and decode entities
+                                    function stripHtml(html) {
+                                      if (!html) return '';
+                                      const temp = document.createElement('div');
+                                      temp.innerHTML = String(html);
+                                      return (temp.textContent || temp.innerText || '').trim();
+                                    }
+
                                     // Build rich HTML payload preserving original HTML (so images & formatting remain)
                                     let htmlParts = ['<div style="font-family: system-ui, -apple-system, sans-serif; color: #111827;">'];
                                     qlist.forEach((q, idx) => {
                                       const qhtml = q.question || q.questionText || q.question_html || '';
                                       htmlParts.push('<div style="margin-bottom:14px;">');
-                                      htmlParts.push(`<div style="margin-bottom:6px;"><strong style=\"display:inline-block;margin-right:6px\">[Q] ${idx + 1}.</strong>${qhtml}</div>`);
+                                      htmlParts.push(`<div style="margin-bottom:6px;">[Q] ${qhtml}</div>`);
                                       const opts = ['opt1','opt2','opt3','opt4'].map(k => q[k]).filter(Boolean);
                                       if (opts.length) {
-                                        htmlParts.push('<ul style="margin:6px 0 0 18px;padding:0;">');
                                         opts.forEach((o, oi) => {
-                                          const letter = ['A','B','C','D'][oi] || String.fromCharCode(65 + oi);
-                                          htmlParts.push(`<li style=\"margin-bottom:6px;\"><strong>${letter}.</strong>&nbsp;${o}</li>`);
+                                          const letter = ['a','b','c','d'][oi] || String.fromCharCode(97 + oi);
+                                          htmlParts.push(`<div style="margin-bottom:2px;">(${letter}) ${o}</div>`);
                                         });
-                                        htmlParts.push('</ul>');
                                       }
                                       if (q.ans) {
-                                        htmlParts.push(`<div style=\"margin-top:6px;color:#065f46;font-weight:600;\">Answer: ${String(q.ans)}</div>`);
+                                        const ansLetter = String(q.ans).toLowerCase().trim();
+                                        htmlParts.push(`<div style="margin-top:6px;">correct: (${ansLetter})</div>`);
                                       }
                                       htmlParts.push('</div>');
                                     });
