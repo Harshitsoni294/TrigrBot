@@ -1,168 +1,84 @@
 [{
   "_id": {
-    "$oid": "6081630af7ad8a422b7a2003"
+    "$oid": "63e5cda2bf9d02131411c99d"
   },
-  "title": "zoom",
-  "code": "0011",
+  "title": "CHEMISTRY",
+  "code": "2",
   "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
+    "$oid": "63de26e5fb4bfb7ede2beddd"
   },
-  "created": 1619092234,
+  "created": 1676004770,
   "status": 1
 },
 {
   "_id": {
-    "$oid": "621d0c1d5eda2f2e923c573c"
+    "$oid": "63e5cdb1de13193df42619e2"
   },
-  "title": "Math",
-  "code": "math",
+  "title": "BIOLOGY",
+  "code": "4",
   "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
+    "$oid": "63de26e5fb4bfb7ede2beddd"
   },
-  "created": 1646070813,
+  "created": 1676004785,
   "status": 1
 },
 {
   "_id": {
-    "$oid": "621d0c2a664d2e11b01d5f40"
+    "$oid": "63e5e0bec703e408327ab87a"
   },
-  "title": "English",
-  "code": "English",
+  "title": "PHYSICS",
+  "code": "1",
   "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
+    "$oid": "63de26e5fb4bfb7ede2beddd"
   },
-  "created": 1646070826,
-  "status": 0
+  "created": 1676009662,
+  "status": 1
 },
 {
   "_id": {
-    "$oid": "621d0c3325fb6f0cda281b27"
+    "$oid": "63e5e0edd551fe7f44169c7e"
   },
-  "title": "Gk",
-  "code": "gk",
+  "title": "MATHEMATICS",
+  "code": "3",
   "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
+    "$oid": "63de26e5fb4bfb7ede2beddd"
   },
-  "created": 1646070835,
-  "status": 0
+  "created": 1676009709,
+  "status": 1
 },
 {
   "_id": {
-    "$oid": "6656efb67ed9933d2d7c1986"
+    "$oid": "6645882dd079bc55380b97c7"
   },
-  "title": "Organisational Behaviour",
+  "title": "BOTANY",
+  "code": "5",
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1715832877,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6645883a36170664a91ddcfd"
+  },
+  "title": "ZOOLOGY",
+  "code": "6",
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1715832890,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "66473a7f916fc300597b232a"
+  },
+  "title": "ZOOLOGY",
   "code": "",
   "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
+    "$oid": "63de26e5fb4bfb7ede2beddd"
   },
-  "created": 1716973494,
-  "status": 1
-},
-{
-  "_id": {
-    "$oid": "6656efc1525d70755b3e4609"
-  },
-  "title": "Marketing Management",
-  "code": "",
-  "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
-  },
-  "created": 1716973505,
-  "status": 1
-},
-{
-  "_id": {
-    "$oid": "6656efcb4d1cee4c41673ab4"
-  },
-  "title": "Project Management",
-  "code": "",
-  "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
-  },
-  "created": 1716973515,
-  "status": 1
-},
-{
-  "_id": {
-    "$oid": "6656efd4221c143d043aa374"
-  },
-  "title": "International Business Management",
-  "code": "",
-  "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
-  },
-  "created": 1716973524,
-  "status": 1
-},
-{
-  "_id": {
-    "$oid": "6656efdea3b0ba0e5f36f609"
-  },
-  "title": "Strategic Management",
-  "code": "",
-  "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
-  },
-  "created": 1716973534,
-  "status": 1
-},
-{
-  "_id": {
-    "$oid": "6656eff17ed9933d2d7c1987"
-  },
-  "title": "Specialization Subject",
-  "code": "",
-  "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
-  },
-  "created": 1716973553,
-  "status": 1
-},
-{
-  "_id": {
-    "$oid": "668295945d747b39fa415238"
-  },
-  "title": "Gks",
-  "code": "",
-  "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
-  },
-  "created": 1719834004,
-  "status": 1
-},
-{
-  "_id": {
-    "$oid": "6697936c7cd0996485758ec5"
-  },
-  "title": "html",
-  "code": "",
-  "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
-  },
-  "created": 1721209708,
-  "status": 1
-},
-{
-  "_id": {
-    "$oid": "678f282026a0c404c41b8120"
-  },
-  "title": "Physics-123",
-  "code": "",
-  "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
-  },
-  "created": 1737435168,
-  "status": 1
-},
-{
-  "_id": {
-    "$oid": "67e7b69702cadd2a3d1a62cf"
-  },
-  "title": "sambhavam ias",
-  "code": "sam",
-  "created_by": {
-    "$oid": "6081603a4fe69c275f3a22d1"
-  },
-  "created": 1743238807,
+  "created": 1715944063,
   "status": 1
 }]
