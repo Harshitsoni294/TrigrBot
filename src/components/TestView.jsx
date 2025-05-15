@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 
 // Use environment-aware API URL
-const API_BASE_URL = import.meta.env.PROD ? '' : 'http://localhost:4000';
+const API_BASE_URL = import.meta.env.PROD ? '/api' : 'http://localhost:4000';
 
 const TestView = () => {
   const [testData, setTestData] = useState(null);

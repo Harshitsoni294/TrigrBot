@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Send, X, Zap, Eye } from 'lucide-react';
 
 // Use environment-aware API URL
-const API_BASE_URL = import.meta.env.PROD ? '' : 'http://localhost:4000';
+const API_BASE_URL = import.meta.env.PROD ? '/api' : 'http://localhost:4000';
 
 const ChatBot = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState([
