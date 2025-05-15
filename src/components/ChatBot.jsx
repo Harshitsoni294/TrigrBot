@@ -490,29 +490,126 @@ const ChatBot = ({ isOpen, onClose }) => {
                                       alert('No questions available to copy.');
                                       return;
                                     }
-                                    // Format plain-text export with [Q] prefix and proper brackets
-                                    const lines = [];
+
+                                    // Build rich HTML payload preserving original HTML (so images & formatting remain)
+                                    let htmlParts = ['<div style="font-family: system-ui, -apple-system, sans-serif; color: #111827;">'];
                                     qlist.forEach((q, idx) => {
-                                      const qtext = (q.question || q.questionText || q.question_html || '').replace(/<[^>]*>/g, '').trim();
-                                      lines.push(`[Q] ${qtext}`);
-                                      if (q.opt1) lines.push(`(a) ${q.opt1.replace(/<[^>]*>/g, '').trim()}`);
-                                      if (q.opt2) lines.push(`(b) ${q.opt2.replace(/<[^>]*>/g, '').trim()}`);
-                                      if (q.opt3) lines.push(`(c) ${q.opt3.replace(/<[^>]*>/g, '').trim()}`);
-                                      if (q.opt4) lines.push(`(d) ${q.opt4.replace(/<[^>]*>/g, '').trim()}`);
-                                      lines.push('');
+                                      const qhtml = q.question || q.questionText || q.question_html || '';
+                                      htmlParts.push('<div style="margin-bottom:14px;">');
+                                      htmlParts.push(`<div style="margin-bottom:6px;"><strong style=\"display:inline-block;margin-right:6px\">[Q] ${idx + 1}.</strong>${qhtml}</div>`);
+                                      const opts = ['opt1','opt2','opt3','opt4'].map(k => q[k]).filter(Boolean);
+                                      if (opts.length) {
+                                        htmlParts.push('<ul style="margin:6px 0 0 18px;padding:0;">');
+                                        opts.forEach((o, oi) => {
+                                          const letter = ['A','B','C','D'][oi] || String.fromCharCode(65 + oi);
+                                          htmlParts.push(`<li style=\"margin-bottom:6px;\"><strong>${letter}.</strong>&nbsp;${o}</li>`);
+                                        });
+                                        htmlParts.push('</ul>');
+                                      }
+                                      if (q.ans) {
+                                        htmlParts.push(`<div style=\"margin-top:6px;color:#065f46;font-weight:600;\">Answer: ${String(q.ans)}</div>`);
+                                      }
+                                      htmlParts.push('</div>');
                                     });
-                                    const textToCopy = lines.join('\n');
-                                    if (navigator.clipboard && navigator.clipboard.writeText) {
-                                      await navigator.clipboard.writeText(textToCopy);
-                                    } else {
-                                      const ta = document.createElement('textarea');
-                                      ta.value = textToCopy;
-                                      document.body.appendChild(ta);
-                                      ta.select();
-                                      document.execCommand('copy');
-                                      document.body.removeChild(ta);
+                                    htmlParts.push('</div>');
+                                    let finalHtml = htmlParts.join('');
+
+                                    // Helper: embed external images as data URLs so pasting into Docs/Word retains images
+                                    async function embedImagesInHtml(html) {
+                                      try {
+                                        const parser = new DOMParser();
+                                        const doc = parser.parseFromString(html, 'text/html');
+                                        const imgs = Array.from(doc.images || []);
+                                        for (const img of imgs) {
+                                          const src = img.getAttribute('src');
+                                          if (!src || src.startsWith('data:')) continue;
+                                          try {
+                                            const resp = await fetch(src);
+                                            if (!resp.ok) continue;
+                                            const blob = await resp.blob();
+                                            // convert blob -> dataURL
+                                            const dataUrl = await new Promise((res, rej) => {
+                                              const reader = new FileReader();
+                                              reader.onload = () => res(reader.result);
+                                              reader.onerror = rej;
+                                              reader.readAsDataURL(blob);
+                                            });
+                                            img.setAttribute('src', dataUrl);
+                                          } catch (imgErr) {
+                                            // ignore image embed failures but continue
+                                            console.warn('image embed failed for', src, imgErr);
+                                          }
+                                        }
+                                        return doc.body.innerHTML;
+                                      } catch (e) {
+                                        return html;
+                                      }
                                     }
-                                    alert('Questions copied to clipboard');
+
+                                    finalHtml = await embedImagesInHtml(finalHtml);
+
+                                    // Plain-text fallback
+                                    const tmp = document.createElement('div');
+                                    tmp.innerHTML = finalHtml;
+                                    const plainText = (tmp.textContent || tmp.innerText || '').trim();
+
+                                    // Try modern clipboard API with HTML support
+                                    if (navigator.clipboard && navigator.clipboard.write) {
+                                      try {
+                                        const blobHtml = new Blob([finalHtml], { type: 'text/html' });
+                                        const blobText = new Blob([plainText], { type: 'text/plain' });
+                                        const clipboardItem = new window.ClipboardItem({
+                                          'text/html': blobHtml,
+                                          'text/plain': blobText
+                                        });
+                                        await navigator.clipboard.write([clipboardItem]);
+                                        alert('Questions (with formatting) copied to clipboard — paste into Google Docs or Word.');
+                                        return;
+                                      } catch (apiErr) {
+                                        console.warn('clipboard.write with HTML failed, falling back', apiErr);
+                                        // continue to fallback below
+                                      }
+                                    }
+
+                                    // Fallback: use execCommand on a hidden element (copies rich HTML in many browsers)
+                                    try {
+                                      const container = document.createElement('div');
+                                      container.style.position = 'fixed';
+                                      container.style.left = '-9999px';
+                                      container.style.opacity = '0';
+                                      container.innerHTML = finalHtml;
+                                      document.body.appendChild(container);
+                                      const range = document.createRange();
+                                      range.selectNodeContents(container);
+                                      const sel = window.getSelection();
+                                      sel.removeAllRanges();
+                                      sel.addRange(range);
+                                      document.execCommand('copy');
+                                      sel.removeAllRanges();
+                                      document.body.removeChild(container);
+                                      alert('Questions copied to clipboard (rich HTML).');
+                                      return;
+                                    } catch (execErr) {
+                                      console.warn('execCommand copy fallback failed', execErr);
+                                    }
+
+                                    // Last resort: plain text copy
+                                    try {
+                                      if (navigator.clipboard && navigator.clipboard.writeText) {
+                                        await navigator.clipboard.writeText(plainText);
+                                      } else {
+                                        const ta = document.createElement('textarea');
+                                        ta.value = plainText;
+                                        document.body.appendChild(ta);
+                                        ta.select();
+                                        document.execCommand('copy');
+                                        document.body.removeChild(ta);
+                                      }
+                                      alert('Questions copied as plain text to clipboard.');
+                                    } catch (finalErr) {
+                                      console.error('final copy attempt failed', finalErr);
+                                      alert('Unable to copy to clipboard. Your browser may block clipboard access.');
+                                    }
                                   } catch (err) {
                                     console.error('copy failed', err);
                                     alert('Unable to copy to clipboard');
