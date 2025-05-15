@@ -1,12 +1,15 @@
-// Vercel serverless function wrapper for Express server
-// This file is kept as .js with CommonJS for Vercel compatibility
+// Vercel serverless function handler
 const path = require('path');
-
-// Load environment variables
 require('dotenv').config({ path: path.resolve(__dirname, '..', '.env') });
 
-// Import the Express app
+// Import and initialize the Express app
 const app = require('../server.cjs');
 
-// Export for Vercel serverless functions
-module.exports = app;
+// Export handler for Vercel
+module.exports = (req, res) => {
+  // Set VERCEL flag
+  process.env.VERCEL = '1';
+  
+  // Handle the request with Express
+  return app(req, res);
+};
