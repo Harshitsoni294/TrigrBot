@@ -15,15 +15,18 @@
   ],
   "routes": [
     {
+      "src": "/generate-test",
+      "methods": ["POST"],
+      "dest": "api/server.js"
+    },
+    {
       "src": "/store-test",
+      "methods": ["POST"],
       "dest": "api/server.js"
     },
     {
       "src": "/fetch-test",
-      "dest": "api/server.js"
-    },
-    {
-      "src": "/generate-test",
+      "methods": ["GET"],
       "dest": "api/server.js"
     },
     {
