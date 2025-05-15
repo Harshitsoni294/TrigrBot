@@ -16,5 +16,7 @@ module.exports = function handler(req, res, next) {
 	} catch (e) {
 		// ignore
 	}
+	// Log for debugging in Vercel function logs
+	try { console.log('[vercel-wrapper] generate-test:', req.method, 'originalUrl->', req.originalUrl || '(n/a)', 'mapped->', req.url); } catch (e) {}
 	return app(req, res, next);
 };

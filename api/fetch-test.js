@@ -15,5 +15,6 @@ module.exports = function handler(req, res, next) {
 	} catch (e) {
 		// ignore
 	}
+	try { console.log('[vercel-wrapper] fetch-test:', req.method, 'originalUrl->', req.originalUrl || '(n/a)', 'mapped->', req.url); } catch (e) {}
 	return app(req, res, next);
 };
