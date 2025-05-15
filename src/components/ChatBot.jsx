@@ -2,6 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, X, Zap, Eye } from 'lucide-react';
 
+// Use environment-aware API URL
+const API_BASE_URL = import.meta.env.PROD ? '' : 'http://localhost:4000';
+
 const ChatBot = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState([
     {
@@ -64,7 +67,7 @@ const ChatBot = ({ isOpen, onClose }) => {
 
     // Always send to backend for intelligent parsing
     try {
-      const resp = await fetch('http://localhost:4000/generate-test', {
+      const resp = await fetch(`${API_BASE_URL}/generate-test`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userMessage.text })
@@ -412,7 +415,7 @@ const ChatBot = ({ isOpen, onClose }) => {
                                   };
 
                                   // POST the compact payload to the server which returns a short id
-                                  const resp = await fetch('http://localhost:4000/store-test', {
+                                  const resp = await fetch(`${API_BASE_URL}/store-test`, {
                                     method: 'POST',
                                     headers: { 'Content-Type': 'application/json' },
                                     body: JSON.stringify(compact)

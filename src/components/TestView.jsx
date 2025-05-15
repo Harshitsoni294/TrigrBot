@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 
+// Use environment-aware API URL
+const API_BASE_URL = import.meta.env.PROD ? '' : 'http://localhost:4000';
+
 const TestView = () => {
   const [testData, setTestData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -20,7 +23,7 @@ const TestView = () => {
       try {
         setLoading(true);
         console.log('Fetching test data for id:', id);
-        const resp = await fetch(`http://localhost:4000/fetch-test?id=${encodeURIComponent(id)}`);
+        const resp = await fetch(`${API_BASE_URL}/fetch-test?id=${encodeURIComponent(id)}`);
         console.log('Fetch response status:', resp.status);
         if (!resp.ok) {
           const err = await resp.json().catch(() => ({}));
