@@ -160,6 +160,26 @@ const TestView = () => {
       padding: '20px',
       fontFamily: 'system-ui, -apple-system, sans-serif'
     }}>
+      <style>{`
+        .test-content img {
+          max-width: 100%;
+          height: auto !important;
+          display: block;
+          margin: 8px 0;
+          border-radius: 4px;
+        }
+        .test-content p {
+          margin: 0;
+          line-height: 1.5;
+        }
+        .test-content p img {
+          display: block;
+          margin: 8px 0;
+        }
+        .test-content span {
+          display: inline;
+        }
+      `}</style>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -194,7 +214,14 @@ const TestView = () => {
 
         {/* Questions */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          {testData.questions.map((question, index) => (
+          {testData.questions.map((question, index) => {
+            // Debug: log the question structure
+            if (index === 0) {
+              console.log('First question structure:', question);
+              console.log('Question field value:', question.question);
+              console.log('Question field type:', typeof question.question);
+            }
+            return (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -20 }}
@@ -208,7 +235,7 @@ const TestView = () => {
               }}
             >
               <div style={{ position: 'relative' }}>
-                <h3 style={{
+                <div className="test-content" style={{
                   fontSize: '18px',
                   fontWeight: '600',
                   color: '#334155',
@@ -216,8 +243,14 @@ const TestView = () => {
                   lineHeight: '1.5'
                 }}>
                   <span>{index + 1}. </span>
-                  <span>{question.question || 'Question text missing'}</span>
-                </h3>
+                  {question.question !== undefined && question.question !== null && question.question.trim() !== '' ? (
+                    <span dangerouslySetInnerHTML={{ __html: question.question }} />
+                  ) : (
+                    <span style={{ color: '#94a3b8', fontStyle: 'italic' }}>
+                      Question text missing (ID: {question._id})
+                    </span>
+                  )}
+                </div>
 
                 {/* Full question ID shown below the question, right-aligned and wrapping so it's always visible */}
                 <div style={{
@@ -258,19 +291,30 @@ const TestView = () => {
                       }}>
                         {letter}.
                       </span>
-                      <span 
-                        style={{
-                          color: isCorrect ? '#15803d' : '#334155'
-                        }}
-                      >
-                        {optionText}
-                      </span>
+                      {optionText !== undefined && optionText !== null ? (
+                        <span 
+                          className="test-content"
+                          style={{
+                            color: isCorrect ? '#15803d' : '#334155',
+                            flex: 1
+                          }}
+                          dangerouslySetInnerHTML={{ __html: optionText }}
+                        />
+                      ) : (
+                        <span style={{
+                          color: isCorrect ? '#15803d' : '#334155',
+                          flex: 1
+                        }}>
+                          Option text missing
+                        </span>
+                      )}
                       {isCorrect && (
                         <span style={{
                           marginLeft: 'auto',
                           color: '#15803d',
                           fontSize: '12px',
-                          fontWeight: '600'
+                          fontWeight: '600',
+                          flexShrink: 0
                         }}>
                           ✓ Correct Answer
                         </span>
@@ -280,7 +324,8 @@ const TestView = () => {
                 })}
               </div>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </motion.div>
     </div>
