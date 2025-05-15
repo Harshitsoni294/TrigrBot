@@ -6,6 +6,20 @@ import { Send, X, Zap, Eye } from 'lucide-react';
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000';
 
 const ChatBot = ({ isOpen, onClose }) => {
+  // Add responsive styles at component level
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @media (min-width: 768px) {
+        .chatbot-container {
+          width: 50vw !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
+
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -201,7 +215,7 @@ const ChatBot = ({ isOpen, onClose }) => {
             onClick={onClose}
           />
 
-          {/* Premium Chatbot Container - Responsive */}
+          {/* Premium Chatbot Container - Responsive: full width on mobile, 50vw on desktop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -211,13 +225,13 @@ const ChatBot = ({ isOpen, onClose }) => {
               damping: 25, 
               stiffness: 300
             }}
-            className="fixed z-50 flex flex-col overflow-hidden"
+            className="chatbot-container"
             style={{ 
               position: 'fixed', 
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              width: 'min(95vw, 50vw)', 
+              width: '95vw',
               maxWidth: '900px',
               height: '95vh',
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
