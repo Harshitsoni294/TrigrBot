@@ -13,6 +13,15 @@ const ChatBot = ({ isOpen, onClose }) => {
       @media (min-width: 768px) {
         .chatbot-container {
           width: 50vw !important;
+          height: 95vh !important;
+          max-height: none !important;
+        }
+      }
+      @media (max-width: 767px) {
+        .chatbot-container {
+          height: 90vh !important;
+          max-height: calc(100vh - 40px) !important;
+          border-radius: 16px !important;
         }
       }
     `;
@@ -233,7 +242,8 @@ const ChatBot = ({ isOpen, onClose }) => {
               transform: 'translate(-50%, -50%)',
               width: '95vw',
               maxWidth: '900px',
-              height: '95vh',
+              height: '90vh',
+              maxHeight: 'calc(100vh - 40px)',
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
               borderRadius: '24px',
               boxShadow: '0 25px 80px -15px rgba(102, 126, 234, 0.6), 0 0 0 1px rgba(255,255,255,0.1)',
