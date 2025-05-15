@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
 
-// Use environment-aware API URL
-const API_BASE_URL = import.meta.env.PROD ? '/api' : 'http://localhost:4000';
+// Use environment variable for API base URL (for independent backend deployment)
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000';
 
 const TestView = () => {
   const [testData, setTestData] = useState(null);

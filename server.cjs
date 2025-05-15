@@ -71,6 +71,16 @@ setInterval(() => {
 
 loadTestStorageFromDisk();
 
+// Health check endpoint for deployment testing
+app.get('/ping', (req, res) => {
+  res.json({ 
+    ok: true, 
+    time: Date.now(),
+    env: process.env.NODE_ENV || 'development',
+    mongodb: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected'
+  });
+});
+
 app.post('/store-test', (req, res) => {
   try {
     const payload = req.body;
