@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "title": "CHEMISTRY",
+  "code": "2",
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1676004770,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "title": "BIOLOGY",
+  "code": "4",
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1676004785,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "title": "PHYSICS",
+  "code": "1",
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1676009662,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "title": "MATHEMATICS",
+  "code": "3",
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1676009709,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6645882dd079bc55380b97c7"
+  },
+  "title": "BOTANY",
+  "code": "5",
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1715832877,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6645883a36170664a91ddcfd"
+  },
+  "title": "ZOOLOGY",
+  "code": "6",
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1715832890,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "66473a7f916fc300597b232a"
+  },
+  "title": "ZOOLOGY",
+  "code": "",
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1715944063,
+  "status": 1
+}]

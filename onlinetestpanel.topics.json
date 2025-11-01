@@ -1,0 +1,2380 @@
+[{
+  "_id": {
+    "$oid": "63e5e14ca7ed8351a36c8bdc"
+  },
+  "topic": "CLASS 11 SETS",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1676009804,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63f4a0432cbf1f0c2d4a9a34"
+  },
+  "topic": "CET MODEL PAPER 1",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1676976195,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63f5e18b403b4b14b24ad961"
+  },
+  "topic": "CLASS 11 RELATIONS AND FUNCTIONS",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677058443,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63f5e1a20be1ae1bbe12e626"
+  },
+  "topic": "CLASS 11 TRIGONOMETRY",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677058466,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63f5e1dc225e9824cb13029f"
+  },
+  "topic": "CLASS 11 COMPLEX NUMBERS AND QUADRATIC EQUATIONS",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677058524,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63f5e20805167e37571b9904"
+  },
+  "topic": "CLASS 11 LINEAR INEQUALITIES",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677058568,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63f5e25b682be2168e237bad"
+  },
+  "topic": "CLASS 11 PERMUTATIONS AND COMBINATIONS",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677058651,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63f5e2b28bf4246e0f613632"
+  },
+  "topic": "CLASS 11 BINOMIAL THEOREM",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677058738,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63f5e2d5403b4b14b24ad966"
+  },
+  "topic": "CLASS 11 SEQUENCE AND SERIES",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677058773,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63f5e2f56f4e4f099a7a0040"
+  },
+  "topic": "CLASS 11 CONIC SECTION",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677058805,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63f5e3536f4e4f099a7a0043"
+  },
+  "topic": "CLASS 11 PROBABILITY",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677058899,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63f5e3660be1ae1bbe12e62e"
+  },
+  "topic": "CLASS 12 PROBABILITY",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677058918,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb808a241f2e5d6622af3e"
+  },
+  "topic": "RELATIONS AND FUNCTIONS CLASS 12",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677426826,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb80d38d9e062d9245e61a"
+  },
+  "topic": "CLASS 11 LIMITS",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677426899,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb811e7b15a14fce1cfcfc"
+  },
+  "topic": "CLASS 12 MATRICES",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677426974,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb8130924493328d5d362d"
+  },
+  "topic": "CLASS 12 DETERMINATS",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677426992,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb81589b4b433db8685a87"
+  },
+  "topic": "CLASS 12 CONTINUITY AND DIFFERENTIABILITY",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677427032,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb81791f910d51a4448e34"
+  },
+  "topic": "CLASS 12 METHODS OF DIFFERNTIATION",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677427065,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb819452d74732a14753a1"
+  },
+  "topic": "CLASS 12 APPLICATIONS OF DERIVATIVES",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677427092,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb81b46eece57cdc251480"
+  },
+  "topic": "CLASS 12 INDEFINITE INTEGRATION",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677427124,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb81ef924493328d5d362f"
+  },
+  "topic": "CLASS 12 APPLICATIONS OF INTEGRATION",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677427183,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb82651e0cb6250d21ab51"
+  },
+  "topic": "CLASS 12 DIFFERENTIAL EQUATIONS",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677427301,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb82773f81cd4366299b88"
+  },
+  "topic": "CLASS 12 VECTORS",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677427319,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb82a363bdf2438c69dabe"
+  },
+  "topic": "CLASS 12 THREE DIMENSIONAL GEOMETRY",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677427363,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb82b55f9c5f10480d129d"
+  },
+  "topic": "CLASS 12 LPP",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677427381,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb8429ca90ca34c502023b"
+  },
+  "topic": "CLASS 12 INVERSE TRIGOMETRIC FUNCTIONS",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677427753,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb876bee21bf474f67916a"
+  },
+  "topic": "CLASS 11 STRAIGHT LINES",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677428587,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "63fb88fc06fd492e62496c7d"
+  },
+  "topic": "CLASS 11 STATISTICS",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1677428988,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d1d0d238a5d317ca67c5f4"
+  },
+  "topic": "Class 11 Some Basic Concepts Of Chemistry Unit 1",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691472082,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d1d0f558af0760214304a5"
+  },
+  "topic": "Class 11 Atomic structure Unit 2",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691472117,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d1d11538075a5d750416a7"
+  },
+  "topic": "Class 11 Periodic classification of elements Unit 3",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691472149,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d1d1317342a137262bc773"
+  },
+  "topic": "Class 11 Chemical Bonding Unit 4",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691472177,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d1d14929b27f0ae62cfb28"
+  },
+  "topic": "Class 11 States of matter Unit 5",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691472201,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d1d17036c8597abc2ab35e"
+  },
+  "topic": "Class 11 Thermodynamics Unit 6",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691472240,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d1d19a2c5fa429ea1ed866"
+  },
+  "topic": "Class 11 Equilibrium Unit 7",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691472282,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34aa15f3fca31431ecfcb"
+  },
+  "topic": "Class 11 Redox reactions Unit 8",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691568801,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34abb04127732ce14e83a"
+  },
+  "topic": "Class 11 Hydrogen Unit 9",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691568827,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34ad59a675155c63e2bbd"
+  },
+  "topic": "Class 11 s - block elements Unit10",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691568853,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34aefad74fa4e96234f55"
+  },
+  "topic": "Class 11 p block elements Unit 11",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691568879,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34b27d11b1325be003a2e"
+  },
+  "topic": "Class 11 Some Basic Principles And Techniques of Organic Chemistry Unit 12",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691568935,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34b3f41991c457215024d"
+  },
+  "topic": "Class 11 Hydrocarbons Unit 13",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691568959,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34b68ad8f5a0a8e02a26e"
+  },
+  "topic": "Class 11 Environmental Chemistry Unit 14",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569000,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34bb171817b493c14fdcb"
+  },
+  "topic": "Class 12 Solid State Unit 1",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569073,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34bc604127732ce14e83c"
+  },
+  "topic": "Class 12 Solutions Unit 2",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569094,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34be241991c457215024e"
+  },
+  "topic": "Class 12 Electrochemistry Unit 3",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569122,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34bf6dea5511546561085"
+  },
+  "topic": "Class 12 Kinetics Unit 4",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569142,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34c113280f272202e1f13"
+  },
+  "topic": "Class 12 Surface chemistry Unit 5",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569169,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34c43ad8f5a0a8e02a270"
+  },
+  "topic": "Class 12 Metallurgy - Principles of isolation of elements Unit 6",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569219,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34c5cdea5511546561086"
+  },
+  "topic": "Class 12 P - Block elements Unit 7",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569244,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34c8d87b639440f6af675"
+  },
+  "topic": "Class 12 d and f Block elements Unit 8",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569293,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34cdb14c7b95a1b1edc28"
+  },
+  "topic": "Class 12 Coordination Chemistry Unit 9",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569371,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34cfffb104153ae05f822"
+  },
+  "topic": "Class 12 Haloalkanes and haloarenes Unit 10",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569407,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34d2a87b639440f6af68b"
+  },
+  "topic": "Class 12 Alcohols  phenols and ethers Unit 11",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569450,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34d46ad8f5a0a8e02a272"
+  },
+  "topic": "Class 12 Aldehydes ketones and Carboxylic acids Unit 12",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569478,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34d5dcbcf3607602bde65"
+  },
+  "topic": "Class 12 Amines and diazonium salts Unit 13",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569501,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34d71199f752d8175de99"
+  },
+  "topic": "Class 12 Biomolecules Unit 14",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569521,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34d95ad7ae2723a664cdd"
+  },
+  "topic": "Class 12 Polymers Unit 15",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569557,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34dae41991c4572150253"
+  },
+  "topic": "Class 12 Chemistry in everyday life Unit 16",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569582,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34e1b6e7c9067a84e7726"
+  },
+  "topic": "Phy Class 11 Physical World Unit 1",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569691,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34e3587b639440f6af68c"
+  },
+  "topic": "Phy Class 11 Units and Measurements Unit 2",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569717,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34e5d07f9aa06ae4323c6"
+  },
+  "topic": "phy Class 11 Motion in a straight line Unit 3",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569757,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34ea7ad7ae2723a664cde"
+  },
+  "topic": "Phy Class 11 Motion in a Plane Unit 4",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569831,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34ebe41991c4572150255"
+  },
+  "topic": "Phy Class 11 Laws of Motion UNIT 5",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569854,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34edc65cd1f114845c2df"
+  },
+  "topic": "Phy Class 11 Work Energy and Power Unit 6",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569884,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34f073280f272202e1f17"
+  },
+  "topic": "Phy Class 11 System of particles and Rotational motion Unit 7",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569927,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34f1ec1afb33a8d501b58"
+  },
+  "topic": "Phy Class 11 Gravitation Unit 8",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569950,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34f4f9be1265bbe5c466e"
+  },
+  "topic": "Phy Class 11 Mechanical properties of Solids Unit 9",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691569999,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34f6fd11b1325be003a33"
+  },
+  "topic": "Phy Class 11 Mechanical properties of Fluids Unit 10",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570031,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34f8fa67b8b1a6004f766"
+  },
+  "topic": "Phy Class 11 Thermal properties of Matter Unit 11",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570063,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34fa4ace78b070a165644"
+  },
+  "topic": "Phy Class 11 Thermodynamics Unit 12",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570084,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34fc2a67b8b1a6004f769"
+  },
+  "topic": "Phy Class 11 Kinetic Theory Unit 13",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570114,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34fe0a67b8b1a6004f76a"
+  },
+  "topic": "Phy Class 11 Oscillations Unit 14",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570144,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d34ff99be1265bbe5c466f"
+  },
+  "topic": "Phy Class 11 Waves Unit 15",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570169,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d350b9ace78b070a165646"
+  },
+  "topic": "Phy Class 12 Electric Charges and Fields Unit 1",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570361,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d350de07f9aa06ae4323ea"
+  },
+  "topic": "Phy Class 12 Electrostatic potential and capacitance Unit 2",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570398,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d350f807f9aa06ae4323ed"
+  },
+  "topic": "Phy Class 12 Current electricity Unit 3",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570424,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d35117a67b8b1a6004f76c"
+  },
+  "topic": "Phy Class 12 Moving charges and magnetism Unit 4",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570455,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d3513741991c4572150258"
+  },
+  "topic": "Phy Class 12 Magnetism and matter Unit 5",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570487,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d3515307f9aa06ae4323ee"
+  },
+  "topic": "Phy Class 12 Electromagnetic induction Unit 6",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570515,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d3516d504918347a7a072c"
+  },
+  "topic": "Phy Class 12 Alternating Current Unit 7",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570541,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d35189d11b1325be003a3d"
+  },
+  "topic": "Phy Class 12 Electromagnetic waves Unit 8",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570569,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d351cbfb104153ae05f828"
+  },
+  "topic": "Phy Class 12 Ray optics and optical instruments Unit 9",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570635,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d351e287b639440f6af697"
+  },
+  "topic": "Phy Class 12 Wave optics Unit 10",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570658,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d352047693a459af09ec79"
+  },
+  "topic": "Phy Class 12 Dual nature of radiation and matter Unit 11",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570692,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d352276e7c9067a84e772b"
+  },
+  "topic": "Phy Class 12 Atoms Unit 12",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570727,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d3525407f9aa06ae4323f1"
+  },
+  "topic": "Phy Class 12 Nuclei Unit 13",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570772,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64d3528871817b493c14fdd9"
+  },
+  "topic": "Phy Class 12 Semi conductor electronics Unit 14",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1691570824,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e47fc5215fdf11d415b02f"
+  },
+  "topic": "BIO CLASS 11 UNIT 1 CHAPTER 1 THE LIVING WORLD",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696517,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e47fdd215fdf11d415b030"
+  },
+  "topic": "BIO CLASS 11 UNIT 1 CHAPTER 2 BIOLOGICAL CLASSIFICATION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696541,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e47ff0ca08e14ba8548e67"
+  },
+  "topic": "BIO CLASS 11 UNIT 1 CHAPTER 3 PLANT KINGDOM",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696560,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e48004ca08e14ba8548e68"
+  },
+  "topic": "BIO CLASS 11 UNIT 1 CHAPTER 4 ANIMAL KINGDOM",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696580,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e4802ae735fa430762f0f1"
+  },
+  "topic": "BIO CLASS 11 UNIT 2 CHAPTER 5 MORPHOLOGY OF FLOWERING PLANTS",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696618,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e48056f2687443d41a666f"
+  },
+  "topic": "BIO CLASS 11 UNIT 2 CHAPTER 6 ANATOMY OF FLOWERING PLANTS",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696662,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e4807a6008444c813f861a"
+  },
+  "topic": "BIO CLASS 11 UNIT 2 CHAPTER 7 STRUCTURAL ORGANISATION IN ANIMALS",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696698,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e480992ea61556517de0cb"
+  },
+  "topic": "BIO CLASS 11 UNIT 3 CHAPTER 8 CELL THE UNIT OF LIFE",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696729,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e480ad1356165add3b428f"
+  },
+  "topic": "BIO CLASS 11 UNIT 3 CHAPTER 9 BIOMOLECULES",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696749,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e480c5e735fa430762f0f2"
+  },
+  "topic": "BIO CLASS 11 UNIT 3 CHAPTER 10 CELL CYCLE AND CELL DIVISION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696773,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e480ed6f44855bcf086a86"
+  },
+  "topic": "BIO CLASS 11 UNIT 4 CHAPTER 11 TRANSPORT IN PLANTS",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696813,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e481056008444c813f861c"
+  },
+  "topic": "BIO CLASS 11 UNIT 4 CHAPTER 12 MINERAL NUTRITION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696837,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e4811c5166a90919211a88"
+  },
+  "topic": "BIO CLASS 11 UNIT 4 CHAPTER 13 PHOTOSYNTHESIS IN HIGHER PLANTS",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696860,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e48132bb5846742b7fa81d"
+  },
+  "topic": "BIO CLASS 11 UNIT 4 CHAPTER 14 RESPIRATION IN PLANTS",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696882,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e4814cf86f7e174b1cccaf"
+  },
+  "topic": "BIO CLASS 11 UNIT 4 CHAPTER 15 PLANT GROWTH AND DEVELOPMENT",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696908,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e4816b5717ac20820dc192"
+  },
+  "topic": "BIO CLASS 11 UNIT 5 CHAPTER 16 DIGESTION AND ABSORPTION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696939,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e48194ca08e14ba8548e6c"
+  },
+  "topic": "BIO CLASS 11 UNIT 5 CHAPTER 17 BREATHING AND EXCHANGE OF GASES",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692696980,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e481af19dde35ec30b9e35"
+  },
+  "topic": "BIO CLASS 11 UNIT 5 CHAPTER 18 BODY FLUIDS AND CIRCULATION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697007,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e481d2c81e0758f77d297f"
+  },
+  "topic": "BIO CLASS 11 UNIT 5 CHAPTER  19 EXCRETORY PRODUCTS AND THEIR ELIMINATION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697042,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e481e52ea61556517de0d0"
+  },
+  "topic": "BIO CLASS 11 UNIT 5 CHAPTER 20 LOCOMOTION AND MOVEMENT",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697061,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e48201da4076117556e2ca"
+  },
+  "topic": "BIO CLASS 11 UNIT 5 CHAPTER 21 NEURAL CONTROL AND COORDINATION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697089,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e4821d19dde35ec30b9e36"
+  },
+  "topic": "BIO CLASS 11 UNIT 5 CHAPTER 22 CHEMICAL COORDINATION AND INTEGRATION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697117,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e482b3da4076117556e2cf"
+  },
+  "topic": "BIO CLASS 12 UNIT 6 CHAPTER1 REPRODUCTION IN ORGANISMS",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697267,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e482e05717ac20820dc197"
+  },
+  "topic": "BIO CLASS 12 UNIT 6 CHAPTER 2 SEXUAL REPRODUCTION IN FLOWERING PLANTS",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697312,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e482f2f86f7e174b1cccb7"
+  },
+  "topic": "BIO CLASS 12 UNIT 6 CHAPTER  3 HUMAN REPRODUCTION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697330,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e48304bb5846742b7fa823"
+  },
+  "topic": "BIO CLASS 12 UNIT 6 CHAPTER 4 REPRODUCTIVE HEALTH",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697348,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e4832de735fa430762f0fb"
+  },
+  "topic": "BIO CLASS 12 UNIT 7 CHAPTER 5 PRINCIPLES OF INHERITANCE AND VARIATION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697389,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e4834af86f7e174b1cccba"
+  },
+  "topic": "BIO CLASS 12 UNIT 7 CHAPTER 6 MOLECULAR BASIS OF INHERITANCE",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697418,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e4835b6f44855bcf086a8a"
+  },
+  "topic": "BIO CLASS 12 UNIT 7 CHAPTER 7 EVOLUTION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697435,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e4837ce46fa566ef5a1afe"
+  },
+  "topic": "BIO CLASS 12 UNIT 8 CHAPTER 8 HUMAN HEALTH AND DISEASE",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697468,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e483a0f2687443d41a667b"
+  },
+  "topic": "BIO CLASS 12 UNIT 8 CHAPTER 9 STRATEGIES FOR ENHANCEMENT IN FOOD PRODUCTION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697504,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e483b7c81e0758f77d2988"
+  },
+  "topic": "BIO CLASS 12 UNIT 8 CHAPTER 10 MICROBES IN HUMAN WELFARE",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697527,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e483ea215fdf11d415b03f"
+  },
+  "topic": "BIO CLASS 12 UNIT 9 CHAPTER 11 BIOTECHNOLOGY PRINCIPLES AND PROCESSES",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697578,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e484086f44855bcf086a8b"
+  },
+  "topic": "BIO CLASS 12 UNIT 9 CHAPTER 12 BIOTECHNOLOGY AND ITS APPLICATIONS",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697608,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e484266008444c813f8620"
+  },
+  "topic": "BIO CLASS 12 UNIT 10 CHAPTER 13 ORGANISMS AND POPULATIONS",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697638,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e48437f86f7e174b1cccbb"
+  },
+  "topic": "BIO CLASS 12 UNIT 10 CHAPTER 14 ECOSYSTEM",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697655,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e4844eca08e14ba8548e73"
+  },
+  "topic": "BIO CLASS 12 UNIT 10 CHAPTER 15 BIODIVERSITY AND CONSERVATION",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697678,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "64e48465047ccf309357b7d1"
+  },
+  "topic": "BIO CLASS 12 UNIT 10 CHAPTER 16 ENVIRONMENTAL ISSUES",
+  "subject_id": {
+    "$oid": "63e5cdb1de13193df42619e2"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1692697701,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "657ff3a59f1dd145e536f915"
+  },
+  "topic": "Class 12 Indefinite integrals and differential Equations",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1702884261,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "658673eb6a1a1f0af603e595"
+  },
+  "topic": "PRACTICALS",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1703310315,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "658d12800abc4f21e81b0fba"
+  },
+  "topic": "CLASS 11 CIRCLES",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1703744128,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "658e4b6de33b190d5b480505"
+  },
+  "topic": "CLASS 11 LAWS OF MOTION",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1703824237,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "658e63dae5b88b786d1f984f"
+  },
+  "topic": "Class 12 Definite integral and application",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1703830490,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "659b7dab3277c4192e3f1908"
+  },
+  "topic": "Class 12 Physics Mock",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1704689067,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "659b7dc228bc155a5d42195d"
+  },
+  "topic": "Class 12 Chemistry Mock",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1704689090,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "659b7dd8d74a297b2174ff12"
+  },
+  "topic": "Class 12 Mathematics Mock",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1704689112,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "65e96c7541c7de399c515164"
+  },
+  "topic": "CLASS 12 DEFINITE INTEGRAL",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1709796469,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "66471c3ffc69ff1b274f9006"
+  },
+  "topic": "II PUC NEET MOCK TEST",
+  "subject_id": {
+    "$oid": "6645882dd079bc55380b97c7"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1715936319,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "665d7b7e5e64bf59263d3281"
+  },
+  "topic": "CLASS 12 ALDEHYDES AND KETONES",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1717402494,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "665e96f71d4ccb36e92b7e99"
+  },
+  "topic": "CLASS 12 COORDINATION COMPOUNDS",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1717475063,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "665fec727d7d4c48b2079cbc"
+  },
+  "topic": "CLASS 12 AMINES - ORGANIC COMPOUNDS CONTAINING NITROGEN",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1717562482,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "66600ff0fe845024f9261e70"
+  },
+  "topic": "CLASS 11 CHEMICAL BONDING AND MOLECULAR STRUCTURE",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1717571568,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6662d413c4dc9169c90ddd17"
+  },
+  "topic": "ELECTROCHEMISTRY AND REDOX REACTION",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1717752851,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6662de5645fe49360542410b"
+  },
+  "topic": "CLASS 12 CHEMICAL KINETICS",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1717755478,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6663f1e9889a7078b2778175"
+  },
+  "topic": "CLASS 11 STRUCTURE OF ATOM",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1717826025,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "66694970ce60fb33b344b658"
+  },
+  "topic": "CLASS 12 ETHERS AND CARBOXYLIC ACID",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1718176112,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6669827df1a3c42a21138ad5"
+  },
+  "topic": "CLASS 12 CHEMISTRY PRACTICAL",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1718190717,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6671240d27fb333b920f1a0f"
+  },
+  "topic": "PHY CLASS 11 MECHANICAL PROPERTIES OF SOLIDS AND FLUIDS",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1718690829,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6672552cfdbd25019d1435cc"
+  },
+  "topic": "CLASS 12 ELECTRIC POTENTIAL CAPACITANCE",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1718768940,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6673fcb418f9a17580745cf5"
+  },
+  "topic": "CLASS 11 MECHANICAL PROPERTIES OF MATTER",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1718877364,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "667556428e3dc77ffe47001b"
+  },
+  "topic": "CLASS 12 PHYSICS ELECTROSTATICS",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1718965826,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "66827554c1fa5d0e7369ee7b"
+  },
+  "topic": "CLASS 12 CAPACITORS",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1719825748,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6683bdd3d1515145c12baef9"
+  },
+  "topic": "CLASS 12 MAGNETISM AND MATTER AND ELECTROMAGNETIC INDUCTION",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1719909843,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6683cbf9046dd145052c20b1"
+  },
+  "topic": "CLASS 11 THERMODYNAMICS AND KINETIC THEORY OF GASES",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1719913465,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6684da52917a5c4e3d314b18"
+  },
+  "topic": "CLASS 12 UNITS AND MEASUREMENTS AND MOTION ALONG A STRAIGHT LINE",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1719982674,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "668b8e235ad9a621db0e1ae9"
+  },
+  "topic": "SOME BASIC PRINCIPLES AND TECHNIQUES AND ORGANIC CHEMISTRY PART 2",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1720421923,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "66ebaf641307de573513c89a"
+  },
+  "topic": "CLASS 12 LIMITS CONTINUITY",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1726721892,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "66fa6c86f73d813a8d419779"
+  },
+  "topic": "CLASS 11 MOTION IN ONE DIMENSION",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1727687814,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "670601e6a750e50b601b87f9"
+  },
+  "topic": "CLASS 12 AC CIRCUITS AND ELECTROMAGNETIC WAVES",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1728446950,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6731e36ab3020b466127222b"
+  },
+  "topic": "CLASS 12 NUCLEI AND SEMICONDUCTOR ELECTRONICS",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1731322730,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "673c59be8d18b17deb594492"
+  },
+  "topic": "SOLUTIONS - KINETICS - HALOALKANES - HALOARENES",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1732008382,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "673d82ba3c38b87ac949feec"
+  },
+  "topic": "CLASS 12 ELECTROSTATICS AND CURRENT ELECTRICITY",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1732084410,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6744210eff3aba56f87ff3e5"
+  },
+  "topic": "CLASS 12 - ELECTROCHEMISTRY - D - F BLOCK ELEMENTS AND COORDINATION COMPUNDS",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1732518158,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6746a35eeb64f9258b72c985"
+  },
+  "topic": "CLASS 12 MOVING CHARGES - MAGNETISM - EMI - AC AND EMW",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1732682590,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6747f5c77ddd021b7b55c4a1"
+  },
+  "topic": "CLASS 12 RAY AND WAVE OPTICS",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1732769223,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "67482fcb51abde56ff443277"
+  },
+  "topic": "CLASS 12 ALTERNATING CURRENT AND ELECTROMAGNETIC INDUCTION",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1732784075,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "674d818d55ea254ab226c0cd"
+  },
+  "topic": "II PUC CET - CHEMISTRY - AMINES-ALDEHYDES-KETONES-BIOMOLECULES-ALCOHOLS-PHENOLS-ETHERS AND CARBOXYLIC ACIDS",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1733132685,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "6757d6bb7b52ff676927ea87"
+  },
+  "topic": "CLASS 12 - DUAL NATURE OF RADIATION MATTER AND ATOMS AND NUCLEI AND SEMICONDUCTOR",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1733809851,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "67776aaa25304447fc0603fe"
+  },
+  "topic": "JEE PHYSICS MOCK TEST",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1735879338,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "67776ac96ffa69497515cd88"
+  },
+  "topic": "JEE CHEMISTRY MOCK TEST",
+  "subject_id": {
+    "$oid": "63e5cda2bf9d02131411c99d"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1735879369,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "67776ad8dd89a0667d31a56f"
+  },
+  "topic": "JEE MATHS MOCK TEST",
+  "subject_id": {
+    "$oid": "63e5e0edd551fe7f44169c7e"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1735879384,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "67c0352ff86a5c266e26bb03"
+  },
+  "topic": "CLASS 11 PHYSICS OSCILLATIONS AND WAVES",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1740649775,
+  "status": 1
+},
+{
+  "_id": {
+    "$oid": "67c13937b6e5da2ab413ae88"
+  },
+  "topic": "CLASS 11 THERMAL PROPERTIES, THERMODYNAMICS AND KINETIC THEORY",
+  "subject_id": {
+    "$oid": "63e5e0bec703e408327ab87a"
+  },
+  "created_by": {
+    "$oid": "63de26e5fb4bfb7ede2beddd"
+  },
+  "created": 1740716343,
+  "status": 1
+}]
