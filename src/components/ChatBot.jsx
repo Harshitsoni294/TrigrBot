@@ -192,13 +192,18 @@ const ChatBot = () => {
 
   return (
     <div style={{
-      minHeight: '100vh',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      backgroundAttachment: 'fixed',
+      height: '100vh',
+      width: '100vw',
+      background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      overflow: 'hidden',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '20px',
+      padding: 'clamp(12px, 2vh, 20px)',
+      boxSizing: 'border-box',
       fontFamily: 'system-ui, -apple-system, sans-serif'
     }}>
       {/* Chatbot Container - Centered on screen */}
@@ -212,20 +217,21 @@ const ChatBot = () => {
         }}
         style={{ 
           width: '100%',
-          maxWidth: '900px',
-          height: '90vh',
-          maxHeight: '800px',
+          maxWidth: '800px',
+          height: '85vh',
+          margin: '0 auto',
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           borderRadius: '20px',
-          boxShadow: '0 25px 80px -15px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255,255,255,0.1)',
+          boxShadow: '0 25px 80px -15px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255,255,255,0.2)',
           display: 'flex',
           flexDirection: 'column',
-          padding: '2px'
+          padding: '2px',
+          overflow: 'hidden'
         }}
       >
             <div style={{ 
               background: '#ffffff', 
-              borderRadius: '22px', 
+              borderRadius: '18px',
               height: '100%', 
               display: 'flex', 
               flexDirection: 'column',
@@ -235,7 +241,7 @@ const ChatBot = () => {
               <div style={{
                 background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                 padding: 'clamp(16px, 4vw, 24px) clamp(16px, 4vw, 24px) clamp(14px, 3vw, 20px)',
-                borderRadius: '22px 22px 0 0',
+                borderRadius: '18px 18px 0 0',
                 position: 'relative',
                 overflow: 'hidden'
               }}>
@@ -251,7 +257,7 @@ const ChatBot = () => {
                   backgroundSize: '50px 50px'
                 }}></div>
 
-                <div className="flex items-center justify-center relative z-10">
+                <div className="flex items-center relative z-10">
                   <div className="flex items-center gap-3">                
                     <div>
                       <h2 style={{ color: 'white', fontSize: 'clamp(16px, 4vw, 18px)', fontWeight: '700', marginBottom: '2px' }}>
