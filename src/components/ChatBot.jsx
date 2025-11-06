@@ -202,7 +202,10 @@ const ChatBot = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '10px 20px',
+      paddingTop: '10px',
+      paddingBottom: '30px',
+      paddingLeft: '20px',
+      paddingRight: '20px',
       boxSizing: 'border-box',
       fontFamily: 'system-ui, -apple-system, sans-serif'
     }}>
@@ -220,6 +223,7 @@ const ChatBot = () => {
           maxWidth: '800px',
           height: '85vh',
           margin: '0 auto',
+          transform: 'translateY(10px)',
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           borderRadius: '20px',
           boxShadow: '0 25px 80px -15px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255,255,255,0.2)',
