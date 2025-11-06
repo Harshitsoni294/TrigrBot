@@ -202,7 +202,7 @@ const ChatBot = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: 'clamp(12px, 2vh, 20px)',
+      padding: '10px 20px',
       boxSizing: 'border-box',
       fontFamily: 'system-ui, -apple-system, sans-serif'
     }}>
