@@ -5,43 +5,49 @@ import { Send, X, Zap, Eye, Copy, Check } from 'lucide-react';
 // Use environment variable for API base URL (for independent backend deployment)
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000';
 
-const ChatBot = ({ isOpen, onClose }) => {
-  // Add responsive styles at component level
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.textContent = `
-      @media (min-width: 768px) {
-        .chatbot-container {
-          width: 50vw !important;
-          height: 95vh !important;
-          max-height: none !important;
-        }
-      }
-      @media (max-width: 767px) {
-        .chatbot-container {
-          height: 90vh !important;
-          max-height: calc(100vh - 40px) !important;
-          border-radius: 16px !important;
-        }
-      }
-    `;
-    document.head.appendChild(style);
-    return () => document.head.removeChild(style);
-  }, []);
+const STORAGE_KEY = 'trigrbot_chat_messages';
 
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      text: "Hello! 👋 I'm your AI Test Assistant. I'm here to help you create comprehensive tests tailored to your needs. What subject or topic would you like to focus on today?",
-      sender: 'bot',
-      timestamp: new Date(Date.now()),
+const ChatBot = () => {
+  // Load messages from localStorage or use default
+  const loadMessages = () => {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        // Convert timestamp strings back to Date objects
+        return parsed.map(msg => ({
+          ...msg,
+          timestamp: new Date(msg.timestamp)
+        }));
+      }
+    } catch (error) {
+      console.error('Error loading messages from localStorage:', error);
     }
-  ]);
+    return [
+      {
+        id: 1,
+        text: "Hello! 👋 I'm your AI Test Assistant. I'm here to help you create comprehensive tests tailored to your needs. What subject or topic would you like to focus on today?",
+        sender: 'bot',
+        timestamp: new Date(Date.now()),
+      }
+    ];
+  };
+
+  const [messages, setMessages] = useState(loadMessages);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [copiedMessageId, setCopiedMessageId] = useState(null);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
+
+  // Save messages to localStorage whenever they change
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
+    } catch (error) {
+      console.error('Error saving messages to localStorage:', error);
+    }
+  }, [messages]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -52,28 +58,8 @@ const ChatBot = ({ isOpen, onClose }) => {
   }, [messages]);
 
   useEffect(() => {
-    if (isOpen) {
-      setTimeout(() => inputRef.current?.focus(), 300);
-    }
-  }, [isOpen]);
-
-  useEffect(() => {
-    const onKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        onClose?.();
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener('keydown', onKeyDown);
-      const { overflow } = document.body.style;
-      document.body.style.overflow = 'hidden';
-      return () => {
-        document.removeEventListener('keydown', onKeyDown);
-        document.body.style.overflow = overflow;
-      };
-    }
-  }, [isOpen, onClose]);
+    setTimeout(() => inputRef.current?.focus(), 300);
+  }, []);
 
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
@@ -205,55 +191,38 @@ const ChatBot = ({ isOpen, onClose }) => {
   };
 
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Premium Backdrop with Blur */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40"
-            style={{ 
-              position: 'fixed', 
-              inset: 0, 
-              background: 'rgba(15, 23, 42, 0.4)', 
-              backdropFilter: 'blur(8px)',
-              zIndex: 9998 
-            }}
-            onClick={onClose}
-          />
-
-          {/* Premium Chatbot Container - Responsive: full width on mobile, 50vw on desktop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ 
-              type: "spring", 
-              damping: 25, 
-              stiffness: 300
-            }}
-            className="chatbot-container"
-            style={{ 
-              position: 'fixed', 
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              width: '92vw',
-              maxWidth: '900px',
-              height: '85vh',
-              maxHeight: 'calc(100vh - 100px)',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              borderRadius: '20px',
-              boxShadow: '0 25px 80px -15px rgba(102, 126, 234, 0.6), 0 0 0 1px rgba(255,255,255,0.1)',
-              zIndex: 9999,
-              display: 'flex',
-              flexDirection: 'column',
-              padding: '2px'
-            }}
-          >
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      backgroundAttachment: 'fixed',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '20px',
+      fontFamily: 'system-ui, -apple-system, sans-serif'
+    }}>
+      {/* Chatbot Container - Centered on screen */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ 
+          type: "spring", 
+          damping: 25, 
+          stiffness: 300
+        }}
+        style={{ 
+          width: '100%',
+          maxWidth: '900px',
+          height: '90vh',
+          maxHeight: '800px',
+          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          borderRadius: '20px',
+          boxShadow: '0 25px 80px -15px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255,255,255,0.1)',
+          display: 'flex',
+          flexDirection: 'column',
+          padding: '2px'
+        }}
+      >
             <div style={{ 
               background: '#ffffff', 
               borderRadius: '22px', 
@@ -282,7 +251,7 @@ const ChatBot = ({ isOpen, onClose }) => {
                   backgroundSize: '50px 50px'
                 }}></div>
 
-                <div className="flex items-center justify-between relative z-10">
+                <div className="flex items-center justify-center relative z-10">
                   <div className="flex items-center gap-3">                
                     <div>
                       <h2 style={{ color: 'white', fontSize: 'clamp(16px, 4vw, 18px)', fontWeight: '700', marginBottom: '2px' }}>
@@ -291,28 +260,6 @@ const ChatBot = ({ isOpen, onClose }) => {
                       
                     </div>
                   </div>
-
-                  <motion.button
-                    whileHover={{ scale: 1.1, rotate: 90 }}
-                    whileTap={{ scale: 0.9 }}
-                    onClick={onClose}
-                    style={{
-                      width: '36px',
-                      height: '36px',
-                      borderRadius: '12px',
-                      background: 'rgba(255, 255, 255, 0.2)',
-                      border: '1px solid rgba(255, 255, 255, 0.3)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      cursor: 'pointer',
-                      backdropFilter: 'blur(10px)',
-                      transition: 'all 0.2s'
-                    }}
-                    aria-label="Close chat"
-                  >
-                    <X className="w-5 h-5" style={{ color: 'white' }} />
-                  </motion.button>
                 </div>
               </div>
 
@@ -815,9 +762,7 @@ const ChatBot = ({ isOpen, onClose }) => {
               </div>
             </div>
           </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+    </div>
   );
 };
 
